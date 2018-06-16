@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * This is a calculator
+ * This is a simple calculator and program searching max element in array (I hope :))
  *
  * @author Inozemtseva Anastasia
  * This program prints sum for two float
@@ -15,12 +15,26 @@ public class Base {
         //Input second float
         System.out.println("Give me float two");
         float j = scanner.nextFloat();
-        //Take sum for two floats
-        float sum = i + j;
-        //Print sum
-        System.out.println("Summ float one and float two is ");
-        System.out.printf("%.4f",sum);
-
+        //Input action
+        System.out.println("What I gonna do?");
+        String k = scanner.next();
+        float res = 0;
+        //Take action for two floats
+        switch (k) {
+            case '+': res = i + j;
+                System.out.printf("Result for action float one and float two is %.4f",res);
+                break;
+            case '-': res = i - j;
+                System.out.printf("Result for action float one and float two is %.4f",res);
+                break;
+            case '/': res = i / j;
+                System.out.printf("Result for action float one and float two is %.4f",res);
+                break;
+            case '*': res = i * j;
+                System.out.printf("Result for action float one and float two is %.4f",res);
+                break;
+            default: System.out.println("I don't get it");
+        }
         scanner.close();
     }
 }
